@@ -1,0 +1,18 @@
+﻿using AgroSys.Domain;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AgroSys.Repository.AnimalRepo
+{
+    public interface IAnimalRepository : IDisposable
+    {
+        IEnumerable<Animal> GetAnimals();
+        Animal GetAnimalByID(int animalId);
+        void InsertAnimal(Animal animal);
+        void DeleteAnimal(int animalID);
+        void UpdateAnimal(Animal animal);
+    }
+}
